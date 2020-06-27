@@ -1,0 +1,45 @@
+<mat-card class="example-card">
+<ng-container *ngIf="this.Profile == null then empty else notEmpty ">
+
+</ng-container>
+</mat-card>
+  <ng-template #empty>
+    <div class="d-flex justify-content-center">
+    <mat-spinner></mat-spinner>
+  </div>
+  </ng-template>
+
+  <ng-template #notEmpty>
+  
+
+      <mat-card-header class="d-block">
+        <h2 class="text-center d-block title-color"> Personal Information</h2>
+        <h3 class="text-center d-block">{{this.Profile.name}}</h3>
+      </mat-card-header>
+      <mat-card-content >
+        <div class="d-flex justify-content-center">
+         <img src="../../assets/perosn.jpg" class="d-block rounded-circle" width="150"/>
+         </div>
+         <dl class="dl-horizontal mt-5">
+          <dt>Email</dt>
+          <dd> <a [href]="'mailto:'+this.Profile.email"> {{this.Profile.email}}</a></dd>
+          <dt>Phone</dt>
+          <dd>{{this.Profile.phone}}</dd>
+
+          <dt>Address</dt>
+          <dd class="text-el"> {{this.Profile.Address}} </dd>
+
+          <dt>Github</dt>
+          <dd> <a [href]="this.Profile.github" target="_blank">   {{this.Profile.github}}</a></dd>
+
+          <dt>LinkedIn</dt>
+          <dd class="text-el"> <a [href]="this.Profile.LinkedIn" target="_blank">   {{this.Profile.LinkedIn}}</a></dd>
+
+          
+        
+        </dl>
+      </mat-card-content>
+    
+    
+     
+  </ng-template>
