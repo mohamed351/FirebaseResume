@@ -5,4 +5,5 @@ export class Education {
   public startDate: string;
   public endDate: string;
   public title: string;
+ 
 }

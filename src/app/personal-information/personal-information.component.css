@@ -3,3 +3,11 @@
     overflow: hidden;
     white-space: nowrap;
 }
+.example-card{
+    height: 100vh;
+}
+@media screen and (max-width:60rem){
+    .example-card{
+        height: auto;
+    }
+}

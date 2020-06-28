@@ -1,8 +1,10 @@
+import { Skills } from './../model/skills';
 import { Education } from './../model/education';
 import { Profile } from './../model/profile';
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database'
 import { AngularFirestore } from '@angular/fire/firestore';
+import { experience } from '../model/experience';
 
 @Injectable({
   providedIn: 'root'
@@ -18,6 +20,9 @@ export class ProfileService {
     return this.database.collection<Education>("Education").valueChanges();
   }
   GetExperance() {
-    return this.database.collection("Experience").valueChanges();
+    return this.database.collection<experience>("Experience").valueChanges();
+  }
+  GetSkills() {
+    return this.database.collection<Skills>("Skills").valueChanges();
   }
 }

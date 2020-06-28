@@ -12,5 +12,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
     color: #054c73;
 
 }
+*{
+    padding:0px;
+    margin: 0px;
+    
+}
 
 

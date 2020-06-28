@@ -21,18 +21,23 @@
          <img src="../../assets/perosn.jpg" class="d-block rounded-circle" width="150"/>
          </div>
          <dl class="dl-horizontal mt-5">
-          <dt>Email</dt>
+          <dt> <i class="fa fa-envelope" aria-hidden="true"></i>
+            Email</dt>
           <dd> <a [href]="'mailto:'+this.Profile.email"> {{this.Profile.email}}</a></dd>
-          <dt>Phone</dt>
+          <dt><i class="fa fa-phone" aria-hidden="true"></i>
+            Phone</dt>
           <dd>{{this.Profile.phone}}</dd>
 
-          <dt>Address</dt>
+          <dt><i class="fa fa-map-marker" aria-hidden="true"></i>
+            Address</dt>
           <dd class="text-el"> {{this.Profile.Address}} </dd>
 
-          <dt>Github</dt>
+          <dt><i class="fa fa-github" aria-hidden="true"></i>
+            Github</dt>
           <dd> <a [href]="this.Profile.github" target="_blank">   {{this.Profile.github}}</a></dd>
 
-          <dt>LinkedIn</dt>
+          <dt><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            LinkedIn</dt>
           <dd class="text-el"> <a [href]="this.Profile.LinkedIn" target="_blank">   {{this.Profile.LinkedIn}}</a></dd>
 
           

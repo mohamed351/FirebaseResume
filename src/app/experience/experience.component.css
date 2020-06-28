@@ -1,0 +1,28 @@
+
+.education-list li{
+    list-style: none;
+ }
+ .education-title, .education-descrption{
+     margin: 0;
+ }
+ .education-card{
+    margin-top: 0.5rem;
+ }
+ .education-info{
+     margin-left: 0.5rem;
+     margin-top: 0.7rem;
+ }
+ .education-descrption{
+     color:#aaa;
+ }
+ .education-title{
+     font-weight: bolder;
+ }
+ @media screen and (max-width:40rem){
+     .education-list{
+         padding-left: 0px;
+     }
+ }
+ .education-container{
+     overflow: auto;
+ }

@@ -13,13 +13,16 @@ import { MatCardModule } from '@angular/material/card';
 import {MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { EducationInformationComponent } from './education-information/education-information.component';
 import { ExperienceComponent } from './experience/experience.component';
+import { SkillsComponent } from './skills/skills.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalInformationComponent,
     EducationInformationComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { ExperienceComponent } from './experience/experience.component';
     AngularFirestoreModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+   MatExpansionModule
+
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]

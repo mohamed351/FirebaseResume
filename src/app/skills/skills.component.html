@@ -1,0 +1,102 @@
+<mat-card>
+    <mat-card-header>
+        <h2 class=" title-color"> Skills</h2>
+  
+      </mat-card-header>
+      <ng-container *ngIf="Skills == null then empty else notEmpty">
+
+      </ng-container>
+  
+      
+</mat-card>
+
+
+<ng-template #empty>
+    <div class="d-flex justify-content-center">
+        <mat-spinner></mat-spinner>
+    </div>
+</ng-template>
+
+<ng-template #notEmpty>
+    <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+           Programming Languages
+            </mat-panel-title>
+            <mat-panel-description>
+               <p></p>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="list-group" *ngFor="let item of GetProgrammingLanguages()">
+            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"> <img [src]="'../../assets/'+item.image" />  {{item.name}}</h5>
+              </div>
+             
+            </div>
+          </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+                            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Backend Technologies
+            </mat-panel-title>
+            <mat-panel-description>
+     
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="list-group" *ngFor="let item of GetServerSide()">
+            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"> <img [src]="'../../assets/'+item.image" />  {{item.name}}</h5>
+              </div>
+             
+            </div>
+          </div>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+                            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Frontend Technologies
+            </mat-panel-title>
+            <mat-panel-description>
+     
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="list-group" *ngFor="let item of GetFrontEnd()">
+            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"> <img [src]="'../../assets/'+item.image" width="50" />  {{item.name}}</h5>
+              </div>
+             
+            </div>
+          </div>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel>
+                            
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+                Databases
+            </mat-panel-title>
+            <mat-panel-description>
+     
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="list-group" *ngFor="let item of GetDatabases()">
+            <div  class="list-group-item list-group-item-action flex-column align-items-start">
+              <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1"> <img [src]="'../../assets/'+item.image" width="50" />  {{item.name}}</h5>
+              </div>
+             
+            </div>
+          </div>
+        </mat-expansion-panel>
+
+      </mat-accordion>
+</ng-template>
