@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database'
 import { AngularFirestore } from '@angular/fire/firestore';
 import { experience } from '../model/experience';
+import { ReferencePeople } from '../model/reference';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,9 @@ export class ProfileService {
   }
   GetSkills() {
     return this.database.collection<Skills>("Skills").valueChanges();
+  }
+
+  GetReferences() {
+    return this.database.collection<ReferencePeople>("Reference").valueChanges();
   }
 }
