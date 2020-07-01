@@ -1,3 +1,4 @@
+import { Courses } from './../model/courses';
 import { Skills } from './../model/skills';
 import { Education } from './../model/education';
 import { Profile } from './../model/profile';
@@ -29,5 +30,8 @@ export class ProfileService {
 
   GetReferences() {
     return this.database.collection<ReferencePeople>("Reference").valueChanges();
+  }
+  GetCourses() {
+    return this.database.collection<Courses>("Courses").valueChanges();
   }
 }

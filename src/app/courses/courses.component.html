@@ -1,0 +1,44 @@
+<mat-card>
+
+    <ng-container *ngIf="this.Courses == null then empty else Notempty ">
+       
+    
+    </ng-container>
+    </mat-card>
+    <ng-template #empty>
+        <div class="d-flex justify-content-center">
+            <mat-card-content>
+                <mat-spinner></mat-spinner>
+        </mat-card-content>
+        </div>
+    </ng-template>
+    
+    <ng-template #Notempty>
+          
+            <mat-card-header>
+             <h2 class="title-color">Courses</h2>    
+            </mat-card-header>
+            <mat-card-content class="education-container">
+                <ul class="education-list">
+                    <li *ngFor="let item of Courses" class="education-card">
+                       <div class="Education-div d-flex">
+                         
+                           <div>
+                         <img [src]="'/../assets/'+item.image" class="rounded-circle" width="80"> 
+                        </div>
+                        <div class="education-info">
+                         <h4 class="d-inline-block education-title"> {{item.name}}</h4>
+              
+                         <p class="education-descrption">{{item.place}}</p>
+                       
+                        
+                        </div>
+                       </div>
+                    </li>
+                </ul>
+            </mat-card-content>
+       
+    </ng-template>
+    
+    
+    
